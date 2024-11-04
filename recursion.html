@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+background-image:url(picture.WEBP);
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100%100%;
+}
+</style>
+ <style>
+  a {
+            color: blue; /* Normal link color */
+        }
+        a:hover {
+            color: green; /* Color when hovered */
+        }
+        a:visited {
+            color: purple; /* Color for visited links */
+}
+</style>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Program Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+.navbar a:hover{
+background-color:#A52A2A;
+}
+
+        nav {
+            background-color: #FFD700;
+            color: black;
+            padding: 1em;
+        }
+.navbar a:hover{
+background-color:#A52A2A;
+}
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .question-list {
+            flex: 1;
+            padding: 20px;
+            background-color:#F5DEB3;
+            margin-right: 10px;
+        }
+
+        .code-output-container {
+            flex: 2;
+            display: none; /* Initially hide the output */
+            flex-direction: column;
+        }
+
+        .code-container, .output-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #D2B48C;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="question-list">
+            <h2><center>Program Questions</center></h2>
+            <ul>
+                <li><a href="#" onclick="showProgram(1) "style="color: black;">1. CALCULATE FACTORIAL OF A NUMBER USING RECURSION
+</a></li>
+                <li><a href="#" onclick="showProgram(2)"style="color: black;">2. CALCULATE FIBONACCI OF A NUMBER USING RECURSION</a></li>
+                <li><a href="#" onclick="showProgram(3)"style="color: black;">3. CALCULATE THE SUM OF NATURAL NUMBERS TILL 10 USING RECURSION.</a></li>
+                <li><a href="#" onclick="showProgram(4)"style="color: black;">4. CONVERT A NUMBER INTO BINARY USING RECURSION.</a></li>
+                <li><a href="#" onclick="showProgram(5)"style="color: black;">5. FIND THE LARGEST ELEMENT IN THE INTEGER ARRAY USING RECURSION.</a></li>
+                <li><a href="#" onclick="showProgram(6)"style="color: black;">6. FIND THE SMALLEST ELEMENT IN THE INTEGER ARRAY USING RECURSION.</a></li>
+                <li><a href="#" onclick="showProgram(7)"style="color: black;">7. ENTER THE NUMBER FROM THE USER AND ADD ALL DIGITS OF THE NUMBER USING RECURSION.</a></li>
+ <li><a href="#" onclick="showProgram(8)"style="color: black;">8. FIND THE ARITHMETIC MEAN OF AN INTEGER ARRAY USING RECURSION.</a></li>
+  </ul>
+        </div>
+        <div class="code-output-container" id="output-container">
+            <div class="code-container" id="code1">
+                <h2><center></u>Code for Question 1</center></u></h2>
+                <pre><code><center>
+
+#include < stdio.h >
+#include < conio.h >
+int fact  ( int n)
+{
+    if ( n==0)
+    return(1);
+    else
+    {
+        return(n*fact(n-1));
+    }
+}
+void main()
+{
+    int n,f;
+    printf("Enter the number of finding factorial:-");
+    scanf("%d",&n);
+    f=fact(n);
+    printf("factorial is:- %d",f);
+  getch();  
+}
+
+
+
+             </center>  </code></pre>
+            </div>
+            <div class="output-container" id="output1">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter the number of finding factorial:-6
+factorial is:- 720
+
+
+
+           </center> </code></pre>
+            </div>
+
+            <div class="code-container" id="code2" style="display:none;">
+                <h2><center>Code for Question 2</center></h2>
+                <pre><code><center>
+
+#include < stdio.h >
+
+
+int fibonacci(int n) {
+    
+    if (n == 0) {
+        return 0;
+    } else if (n == 1) {
+        return 1;
+    }
+    
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int num;
+
+    printf("Enter a non-negative integer: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Fibonacci is not defined for negative numbers.\n");
+    } else {
+        printf("Fibonacci of %d = %d\n", num, fibonacci(num));
+    }
+
+    return 0;
+}
+
+    
+           
+
+
+             </center>   </code></pre>
+            </div>
+            <div class="output-container" id="output2" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter a non-negative integer: 12
+Fibonacci of 12 = 144
+
+
+
+
+               </center> </code></pre>
+            </div>
+
+            <div class="code-container" id="code3" style="display:none;">
+                <h2><center>Code for Question 3</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int sumNaturalNumbers(int n) {
+    
+    if (n == 0) {
+        return 0;
+    }
+    
+    return n + sumNaturalNumbers(n - 1);
+}
+
+int main() {
+    int num = 10;  
+    int sum = sumNaturalNumbers(num);
+    printf("The sum of natural numbers up to %d is %d\n", num, sum);
+
+    return 0;
+}
+
+
+
+
+                </center></code></pre>
+            </div>
+            <div class="output-container" id="output3" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+The sum of natural numbers up to 10 is 55
+
+
+                </center></code></pre>
+            </div>
+<div class="code-container" id="code4" style="display:none;">
+                <h2><center>Code for Question 4</center></h2>
+                <pre><code><center>
+#include < stdio.h >
+
+
+void decimalToBinary(int n) {
+    // Base case: if n is 0, return
+    if (n == 0) {
+        return;
+    }
+    
+    decimalToBinary(n / 2);
+   
+    printf("%d", n % 2);
+}
+
+int main() {
+    int num;
+
+    printf("Enter a non-negative integer: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Please enter a non-negative integer.\n");
+    } else if (num == 0) {
+        printf("Binary representation of 0 is 0\n");
+    } else {
+        printf("Binary representation of %d is: ", num);
+        decimalToBinary(num);
+        printf("\n");
+    }
+
+    return 0;
+}
+
+</center></code></pre>
+            </div>
+
+ <div class="output-container" id="output4" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter a non-negative integer: 10
+Binary representation of 10 is: 1010
+
+
+ </center></code></pre>
+            </div>
+<div class="code-container" id="code5" style="display:none;">
+                <h2><center>Code for Question 5</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int findLargest(int arr[], int size) {
+   
+    if (size == 1) {
+        return arr[0];
+    }
+
+    
+    int largestInRest = findLargest(arr, size - 1);
+    return (arr[size - 1] > largestInRest) ? arr[size - 1] : largestInRest;
+}
+
+int main() {
+    int n;
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int largest = findLargest(arr, n);
+    printf("The largest element in the array is: %d\n", largest);
+
+    return 0;
+}
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+<div class="output-container" id="output5" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter the number of elements in the array: 5
+Enter the elements of the array:
+12
+7
+23
+45
+9
+The largest element in the array is: 45
+
+
+
+ </center></code></pre>
+            </div>
+<div class="code-container" id="code6" style="display:none;">
+                <h2><center>Code for Question 6</center></h2>
+                <pre><code><center>
+
+
+
+
+#include < stdio.h >
+
+
+int findSmallest(int arr[], int n) {
+    
+    if (n == 1) {
+        return arr[0];
+    }
+
+   
+    int smallestInRest = findSmallest(arr, n - 1);
+
+    
+    return (arr[n - 1] < smallestInRest) ? arr[n - 1] : smallestInRest;
+}
+
+int main() {
+    int arr[] = {12, 3, 5, 7, 19};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    int smallest = findSmallest(arr, n);
+    printf("The smallest element in the array is: %d\n", smallest);
+    
+    return 0;
+}
+
+
+
+</center></code></pre>
+            </div>
+<div class="output-container" id="output6" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+The smallest element in the array is: 3
+
+
+
+
+</center></code></pre>
+            </div>
+
+<div class="code-container" id="code7" style="display:none;">
+                <h2><center>Code for Question 7</center></h2>
+                <pre><code><center>
+
+#include < stdio.h >
+
+
+int sumOfDigits(int num) {
+   
+    if (num == 0) {
+        return 0;
+    }
+    
+   
+    return (num % 10) + sumOfDigits(num / 10);
+}
+
+int main() {
+    int number;
+    
+    
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    
+  
+    if (number < 0) {
+        number = -number; 
+    }
+
+    
+    int sum = sumOfDigits(number);
+    printf("The sum of the digits is: %d\n", sum);
+    
+    return 0;
+}
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+<div class="output-container" id="output7" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter a number: 15
+The sum of the digits is: 6
+
+  
+
+
+
+
+</center></code></pre>
+            </div>
+
+<div class="code-container" id="code8" style="display:none;">
+                <h2><center>Code for Question 7</center></h2>
+                <pre><code><center>
+
+#include < stdio.h >
+
+
+int sumOfArray(int arr[], int n) {
+    
+    if (n == 0) {
+        return 0;
+    }
+   
+    return arr[n - 1] + sumOfArray(arr, n - 1);
+}
+
+
+double arithmeticMean(int arr[], int n) {
+    if (n == 0) {
+        return 0; 
+    }
+    int sum = sumOfArray(arr, n);
+    return (double)sum / n; 
+}
+
+int main() {
+    int arr[] = {23,12,7,8,4,3};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    double mean = arithmeticMean(arr, n);
+    printf("The arithmetic mean of the array is: %.2f\n", mean);
+    
+    return 0;
+}
+
+
+
+
+</center></code></pre>
+            </div>
+
+<div class="output-container" id="output8" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+The arithmetic mean of the array is: 9.50
+
+
+</center></code></pre>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function showProgram(questionNumber) {
+            // Hide all code and output sections
+            document.querySelectorAll('.code-container, .output-container').forEach((el) => {
+                el.style.display = 'none';
+            });
+
+            // Show the selected question's code and output
+            document.getElementById('code' + questionNumber).style.display = 'block';
+            document.getElementById('output' + questionNumber).style.display = 'block';
+
+            // Show the code-output container
+            document.getElementById('output-container').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        body {
+            background-color: grey;
+            margin: 0; /* Remove default margin */
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: darkgrey;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px; /* Added horizontal padding for better click area */
+            transition: background-color 0.3s; /* Smooth transition for hover */
+        }
+        a:hover {
+            background-color: lightgrey;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" target="main">HOME</a>
+        <a href="about.html" target="main">ABOUT US</a> <!-- Links target the main frame -->
+    </nav>
+</body>
+</html>

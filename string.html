@@ -1,0 +1,2409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+background-image:url(picture.WEBP);
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100%100%;
+}
+</style>
+ <style>
+  a {
+            color: blue; /* Normal link color */
+        }
+        a:hover {
+            color: green; /* Color when hovered */
+        }
+        a:visited {
+            color: purple; /* Color for visited links */
+}
+</style>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Program Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+.navbar a:hover{
+background-color:#A52A2A;
+}
+
+        nav {
+            background-color: #FFD700;
+            color: black;
+            padding: 1em;
+        }
+.navbar a:hover{
+background-color:#A52A2A;
+}
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .question-list {
+            flex: 1;
+            padding: 20px;
+            background-color:#F5DEB3;
+            margin-right: 10px;
+        }
+
+        .code-output-container {
+            flex: 2;
+            display: none; /* Initially hide the output */
+            flex-direction: column;
+        }
+
+        .code-container, .output-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #D2B48C;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="question-list">
+            <h2><center>Program Questions</center></h2>
+            <ul>
+                <li><a href="#" onclick="showProgram(1) "style="color: black;">1. ENTER THE STRING FROM USER AND CONVERT IN UPPERCASE ?
+</a></li>
+                <li><a href="#" onclick="showProgram(2)"style="color: black;">2. ENTER THE STRING FROM USER AND CONVERT IN LOWERCASE ?
+
+
+ </a></li>
+                <li><a href="#" onclick="showProgram(3)"style="color: black;">3. ENTER THE STRING FROM USER AND CONVERT INTO SENTENCE CASE ?
+
+Explanation -FOR EXAMPLE: THIS IS A SENTENCE. (IT IS IN UPPERCASE) CONVERT INTO This is a sentence.
+ </a></li>
+                <li><a href="#" onclick="showProgram(4)"style="color: black;">4.ENTER THE STRING FROM USER AND CONVERT INTO TITLE CASE ?
+
+Explanation -FOR EXAMPLE: THIS IS A SENTENCE. (IT IS IN UPPERCASE) CONVERT INTO This Is A Sentence.
+  </a></li>
+                <li><a href="#" onclick="showProgram(5)"style="color: black;">5. ENTER THE STRING FROM USER AND CONVERT INTO TOGGLE CASE ?
+
+Explanation -FOR EXAMPLE: This Is a Sentence. (IT IS IN UPPERCASE) CONVERT INTO tHIS iS A sENTENCE.
+ </a></li>
+                <li><a href="#" onclick="showProgram(6)"style="color: black;">6. ENTER THE STRING FROM USER AND FINAL LENGTH OF THE STRING ?
+
+
+ </a></li>
+                <li><a href="#" onclick="showProgram(7)"style="color: black;">7. ENTER TWO STRINGS FROM USER AND COMPARE THOSE STRINGS THAT THEY ARE EQUAL OR NOT?
+
+
+ </a></li>
+ <li><a href="#" onclick="showProgram(8)"style="color: black;">8. ENTER TWO STRINGS FROM USER AND CONCATENATE THOSE STRINGS IN ANOTHER STRING AND DISPLAY THE ANSWER?
+
+
+</a></li>
+<li><a href="#" onclick="showProgram(9)"style="color: black;">9. ENTER THE STRING FROM USER AND COPY IT INTO ANOTHER STRING VARIABLE?
+
+ 
+    </a></li>
+<li><a href="#" onclick="showProgram(10)"style="color: black;">10. ENTER THE STRING FROM USER, ENTER THE INDEX NUMBER AND PRINT CHARACTER PRESENT ON THAT INDEX ?
+
+Explanation -FOR EXAMPLE: HELLO WORLD ENTER THE INDEX: 6 THE CHARACTER IS W
+
+ 
+       </a></li>
+<li><a href="#" onclick="showProgram(11)"style="color: black;">11. ENTER THE STRING FROM USER AND CHECK ITS PALINDROME OR NOT?
+
+  
+       </a></li>
+<li><a href="#" onclick="showProgram(12)"style="color: black;">12.ENTER THE STRING FROM THE USER AND PRINT EACH CHARACTER IN NEW LINE ?
+
+  
+      </a></li>
+<li><a href="#" onclick="showProgram(13)"style="color: black;">13. ENTER THE STRING FROM THE USER AND COPY REVERSE OF THE STRING INTO ANOTHER STRING ?
+
+   
+    </a></li>
+<li><a href="#" onclick="showProgram(14)"style="color: black;">14.ENTER THE STRING FROM THE USER AND PRINT THE DIFFERENCE OF ASCII VALUE OF EACH CHARACTER ?
+
+  
+            </a></li>
+<li><a href="#" onclick="showProgram(15)"style="color: black;">15. ENTER THE STRING FROM THE USER, ENTER A CHARACTER ALSO AND SEARCH THE CHARACTER IN THE STRING?
+
+   
+      </a></li>
+<li><a href="#" onclick="showProgram(16)"style="color: black;">16. ENTER THE STRING FROM THE USER, ALSO ENTER A CHARACTER AND PRINT THE INDEX OF THE CHARACTER IF IT IS EXIST IN THE STRING ELSE PRINT -1.
+
+   
+   </a></li>
+<li><a href="#" onclick="showProgram(17)"style="color: black;">17. ENTER THE STRING FROM THE USER, AND COUNT THE NUMBER OF VOWELS.
+
+  
+    </a></li>
+<li><a href="#" onclick="showProgram(18)"style="color: black;">18. ENTER THE STRING FROM THE USER AND CONVERT INTO AN INTEGER VALUE?
+
+  
+       </a></li>
+<li><a href="#" onclick="showProgram(19)"style="color: black;">19. ENTER THE STRING FROM THE USER AND CONVERT INTO A FLOAT VALUE?
+
+   
+        </a></li>
+<li><a href="#" onclick="showProgram(20)"style="color: black;">20.ENTER THE STRING FROM THE USER AND COUNT THE NUMBER OF CHARACTERS, WORDS, SPACES AND LINE. </a></li>
+
+<li><a href="#" onclick="showProgram(21)"style="color: black;">21. PRINT ALL THE PERMUTATION OF A STRING I.E. "ABCDE".
+
+
+</a></li>
+<li><a href="#" onclick="showProgram(22)"style="color: black;">22. ENTER THE STRING FROM THE USER, SORT THE STRING IN ASCENDING ORDER AND PRINT IT.
+
+
+</a></li>
+<li><a href="#" onclick="showProgram(23)"style="color: black;">23. ENTER A SENTENCE FROM USER AND THEN ENTER THE WORD AND COUNT THE OCCURENCE OF THAT WORD IN THE SENTENCE.
+
+
+
+</a></li>
+<li><a href="#" onclick="showProgram(24)"style="color: black;">24. ENTER A SENTENCE FROM USER AND THEN ENTER THE WORD AND REPLACE THAT WORD BY ANOTHER WORD.
+
+
+
+</a></li>
+
+<li><a href="#" onclick="showProgram(25)"style="color: black;">25. ENTER THE STRING FROM THE USER AND TRIM/ ELIMINATE THE SPACES FROM BOTH ENDS (IF ANY).
+
+
+</a></li>
+
+
+
+
+<li><a href="#" onclick="showProgram(26)"style="color: black;">26. ENTER THE STRING FROM USER AND SPLITS THE FIRST WORD AND SECOND WORD AND RETURN THE START INDEX OF THE SECOND WORD.
+
+
+
+
+</a></li>
+
+<li><a href="#" onclick="showProgram(27)"style="color: black;">27. DISPLAY THE STRING ON THE OUTPUT SCREEN BUT ASK THE TEXT ALIGNMENT OPTION GIVEN BY THE USER (1 FOR LEFT, 2 FOR CENTER, 3 RIGHT)
+
+
+
+
+
+</a></li>
+
+<li><a href="#" onclick="showProgram(28)"style="color: black;">28. CREATE A DICTIONARY HAVING 10 WORDS AND THEIR MEANING WITH FOLLOWING OPERATIONS. [CREATE, DELETE, SEARCH].
+
+
+</a></li>
+
+
+<li><a href="#" onclick="showProgram(29)"style="color: black;">29. ENTER THE STRING FROM USER AND CONVERT CHARACTERS INTO THEIR ASCII VALUES IN THE INTEGER ARRAY. [FOR EXAMPLE TAKE 10 CHARACTERS]
+
+
+
+</a></li>
+
+  </ul>
+        </div>
+        <div class="code-output-container" id="output-container">
+            <div class="code-container" id="code1">
+                <h2><center></u>Code for Question 1</center></u></h2>
+                <pre><code><center>
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    int i = 0;
+
+    
+    printf("Enter a string: ");
+    gets(str); 
+    //conver uppercase
+    while (str[i] != '\0') {
+        
+        if (str[i] >= 'a' && str[i] <= 'z') {
+           
+            str[i] = str[i] - ('a' - 'A');
+        }
+        i++;
+    }
+
+    
+    printf("Uppercase String: %s\n", str);
+    return 0;
+}
+
+
+
+
+             </center>  </code></pre>
+            </div>
+            <div class="output-container" id="output1">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter a string: c language
+Uppercase String: C LANGUAGE
+
+
+
+
+
+           </center> </code></pre>
+            </div>
+
+            <div class="code-container" id="code2" style="display:none;">
+                <h2><center>Code for Question 2</center></h2>
+                <pre><code><center>
+
+
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i = 0;
+
+   
+    printf("Enter a string: ");
+    gets(str); 
+    
+    
+    
+    //conver to lowercase
+    while (str[i] != '\0') {
+        
+        if (str[i] >= 'A' && str[i] <= 'Z') {
+            
+            str[i] = str[i] + ('a' - 'A');
+        }
+        i++;
+    }
+
+    
+    printf("Lowercase String: %s\n", str);
+    return 0;
+}
+
+    
+
+
+
+
+             </center>   </code></pre>
+            </div>
+            <div class="output-container" id="output2" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter a string: BUSINESS
+Lowercase String: business
+
+
+
+
+
+
+               </center> </code></pre>
+            </div>
+
+            <div class="code-container" id="code3" style="display:none;">
+                <h2><center>Code for Question 3</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    int i = 0;
+
+  
+    printf("Enter a string:- ");
+    gets(str); 
+   //convert first letter
+    if (str[0] >= 'a' && str[0] <= 'z') {
+        str[0] = str[0] - ('a' - 'A');
+    }
+
+   
+    while (str[i] != '\0') {
+        // Convert lowercase
+        if (str[i] >= 'A' && str[i] <= 'Z') {
+            str[i] = str[i] + ('a' - 'A');
+        }
+
+        
+        if (str[i] == '.' && str[i + 1] == ' ') {
+            i += 2; 
+            if (str[i] >= 'a' && str[i] <= 'z') {
+                str[i] = str[i] - ('a' - 'A');
+            }
+            continue;
+        }
+
+        i++;
+    }
+
+   
+    printf("Sentence Case String: %s\n", str);
+    return 0;
+}
+
+
+
+
+
+
+
+
+                </center></code></pre>
+            </div>
+            <div class="output-container" id="output3" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter a string:- tHIs IS a SEnteNCE
+Sentence Case String: this is a sentence
+
+
+
+
+
+                </center></code></pre>
+            </div>
+<div class="code-container" id="code4" style="display:none;">
+                <h2><center>Code for Question 4</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int main() {
+    char str[100];
+    int i = 0;
+
+    
+    printf("Enter a string: ");
+    gets(str); 
+    // Convert to title case
+    while (str[i] != '\0') {
+        // Convert the first letter to uppercase
+        if (i == 0 || str[i - 1] == ' ' || str[i - 1] == '.' || str[i - 1] == '!' || str[i - 1] == '?') {
+           
+            if (str[i] >= 'a' && str[i] <= 'z') {
+                str[i] = str[i] - ('a' - 'A');
+            }
+        } else {
+            
+            if (str[i] >= 'A' && str[i] <= 'Z') {
+                str[i] = str[i] + ('a' - 'A');
+            }
+        }
+        i++;
+    }
+
+   
+    printf("Title Case String: %s\n", str);
+    return 0;
+}
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+ <div class="output-container" id="output4" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter a string: this is a SENTENce
+Title Case String: This Is A Sentence
+
+
+
+
+
+ </center></code></pre>
+            </div>
+<div class="code-container" id="code5" style="display:none;">
+                <h2><center>Code for Question 5</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    int i = 0;
+
+    printf("Enter a string: ");
+    gets(str); 
+    // Convert to toggle case
+    while (str[i] != '\0') {
+        
+        if (str[i] >= 'a' && str[i] <= 'z') {
+            //CONVERT LOWER TO UPPER
+            str[i] = str[i] - ('a' - 'A');
+        } else if (str[i] >= 'A' && str[i] <= 'Z') {
+            //CONVERT UPPER TO LOWER
+            str[i] = str[i] + ('a' - 'A');
+        }
+        i++;
+    }
+    printf("Toggle Case String: %s\n", str);
+    return 0;
+}
+
+
+    
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+<div class="output-container" id="output5" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter a string: cOmPuTeR
+Toggle Case String: CoMpUtEr
+
+
+ </center></code></pre>
+            </div>
+<div class="code-container" id="code6" style="display:none;">
+                <h2><center>Code for Question 6</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    int length = 0;
+
+ 
+    printf("Enter a string: ");
+    gets(str); /
+    // CALCULATE LENGTH
+    while (str[length] != '\0') {
+        length++; 
+    }
+
+  
+    printf("Final Length of the String: %d\n", length);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+<div class="output-container" id="output6" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+Enter a string: Grow Your Business 
+Final Length of the String: 19
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+<div class="code-container" id="code7" style="display:none;">
+                <h2><center>Code for Question 7</center></h2>
+                <pre><code><center>
+
+#include < stdio.h >
+
+int main() {
+    char str1[100]; 
+    char str2[100]; 
+    int i = 0;
+    int areEqual = 1;
+    printf("Enter the first string: ");
+    gets(str1); 
+    
+    printf("Enter the second string: ");
+    gets(str2); 
+    // Compare the two strings
+    while (str1[i] != '\0' || str2[i] != '\0') {
+        if (str1[i] != str2[i]) {
+            areEqual = 0; 
+            break; 
+        }
+        i++;
+    }
+
+    if (areEqual) {
+        printf("The strings are equal.\n");
+    } else {
+        printf("The strings are not equal.\n");
+    }
+
+    return 0;
+}
+
+    
+    
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+<div class="output-container" id="output7" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter the first string: HELLO
+Enter the second string: WORLD
+The strings are not equal.
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+<div class="code-container" id="code8" style="display:none;">
+                <h2><center>Code for Question 8</center></h2>
+                <pre><code><center>
+
+
+ #include < stdio.h >
+
+int main() {
+    char str1[100];
+    char str2[100]; 
+    char result[200]; 
+    int i = 0, j = 0;
+
+   
+    printf("Enter the first string: ");
+    gets(str1);
+    
+    
+    printf("Enter the second string: ");
+    gets(str2);
+    // Copy the first string 
+    while (str1[i] != '\0') {
+        result[j] = str1[i];
+        i++;
+        j++;
+    }
+
+    // Copy the second string 
+    while (str2[i] != '\0') {
+        result[j] = str2[i];
+        i++;
+        j++;
+    }
+
+    result[j] = '\0';
+    printf("Concatenated String: %s\n", result);
+    return 0;
+}
+  
+
+
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+<div class="output-container" id="output8" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter the first string: hello
+Enter the second string: world
+Concatenated String: helloworld
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+<div class="code-container" id="code9" style="display:none;">
+                <h2><center>Code for Question 9</center></h2>
+                <pre><code><center>
+
+
+
+#include < stdio.h >
+
+int main() {
+    char source[100]; 
+    char destination[100];
+    int i = 0;
+
+    
+    printf("Enter a string: ");
+    gets(source); 
+
+    while (source[i] != '\0') {
+        destination[i] = source[i]; // Copy 
+        i++;
+    }
+
+  
+    destination[i] = '\0';
+
+  
+    printf("Copied String: %s\n", destination);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+
+
+
+<div class="output-container" id="output9" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter a string: This is a copy
+Copied String: This is a copy
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="code-container" id="code10" style="display:none;">
+                <h2><center>Code for Question 10</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    int index;
+
+
+    printf("Enter a string: ");
+    gets(str); 
+    
+    printf("Enter the index: ");
+    scanf("%d", &index);
+
+    
+    if (index < 0) {
+        printf("Index cannot be negative.\n");
+    } else {
+        int i = 0;
+       
+        while (i < index && str[i] != '\0') {
+            i++;
+        }
+
+        
+        if (str[i] != '\0') {
+            printf("The character at index %d is: %c\n", index, str[i]);
+        } else {
+            printf("Index is out of bounds.\n");
+        }
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+
+<div class="output-container" id="output10" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter a string: world wide web
+Enter the index: 8
+The character at index 8 is: d
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="code-container" id="code11" style="display:none;">
+                <h2><center>Code for Question 11</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    int i = 0, length = 0, isPalindrome = 1;
+    
+
+    
+    printf("Enter a string: ");
+    gets(str); 
+
+    // Calculate the length 
+    while (str[length] != '\0') {
+        length++;
+    }
+
+   //check palindrome
+    for (i = 0; i < length / 2; i++) {
+        if (str[i] != str[length - 1 - i]) {
+            isPalindrome = 0; 
+            break; 
+        }
+    }
+
+   
+    if (isPalindrome) {
+        printf("The string is a palindrome.\n");
+    } else {
+        printf("The string is not a palindrome.\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+<div class="output-container" id="output11" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter a string: computer
+The string is not a palindrome.
+
+Enter a string: mam
+The string is a palindrome.
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+
+<div class="code-container" id="code12" style="display:none;">
+                <h2><center>Code for Question 12</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    int i = 0;
+
+    
+    printf("Enter a string: ");
+    gets(str); 
+    // print character new line
+    while (str[i] != '\0') {
+        printf("%c\n", str[i]);
+        i++; 
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+<div class="output-container" id="output12" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter a string:  C LANGUAGEC LANGUAGE
+C
+ 
+L
+A
+N
+G
+U
+A
+G
+E
+
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+
+<div class="code-container" id="code13" style="display:none;">
+                <h2><center>Code for Question 13</center></h2>
+                <pre><code><center>
+
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    char reversed[100]; 
+    int length = 0, i;
+
+    
+    printf("Enter a string: ");
+    gets(str);
+    // Calculate the length 
+    while (str[length] != '\0') {
+        length++;
+    }
+
+    // REVERSE
+    for (i = 0; i < length; i++) {
+        reversed[i] = str[length - 1 - i]; 
+    }
+
+   
+    reversed[length] = '\0';
+
+   
+    printf("Reversed String: %s\n", reversed);
+    return 0;
+}
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+<div class="output-container" id="output13" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter a string: program
+Reversed String: margorp
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+
+
+
+<div class="code-container" id="code14" style="display:none;">
+                <h2><center>Code for Question 14</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    int i = 0;
+
+    
+    printf("Enter a string: ");
+    gets(str); 
+    // Print the ASCII differences
+    printf("ASCII value differences:\n");
+    while (str[i] != '\0' && str[i + 1] != '\0') {
+        int difference = str[i + 1] - str[i];
+        
+        
+        printf("Difference between '%c' and '%c': %d\n", str[i], str[i + 1], difference);
+        i++;
+    }
+
+    return 0;
+}
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+<div class="output-container" id="output14" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter a string: world
+ASCII value differences:
+Difference between 'w' and 'o': -8
+Difference between 'o' and 'r': 3
+Difference between 'r' and 'l': -6
+Difference between 'l' and 'd': -8
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+<div class="code-container" id="code15" style="display:none;">
+                <h2><center>Code for Question 15</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    char searchChar; 
+    int found = 0;  
+    int i = 0;
+
+    
+    printf("Enter a string: ");
+    gets(str); 
+
+//character to search
+    printf("Enter a character to search: ");
+    scanf(" %c", &searchChar); 
+
+    
+    while (str[i] != '\0') {
+        if (str[i] == searchChar) {
+            found = 1; 
+            break; 
+        }
+        i++; 
+    }
+
+    if (found) {
+        printf("The character '%c' is found in the string.\n", searchChar);
+    } else {
+        printf("The character '%c' is not found in the string.\n", searchChar);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+<div class="output-container" id="output15" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter a string: program
+Enter a character to search: x
+The character 'x' is not found in the string.
+
+
+
+Enter a string: c language
+Enter a character to search: l
+The character 'l' is found in the string.
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="code-container" id="code16" style="display:none;">
+                <h2><center>Code for Question 16</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    char searchChar; 
+    int index = -1; 
+    int i = 0;
+
+  
+    printf("Enter a string: ");
+    gets(str); 
+   
+    printf("Enter a character to search: ");
+    scanf(" %c", &searchChar); 
+   //SEARCH
+    while (str[i] != '\0') {
+        if (str[i] == searchChar) {
+            index = i; 
+            break;
+        }
+        i++;
+    }
+    printf("Index of character '%c': %d\n", searchChar, index);
+    return 0;
+}
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+<div class="output-container" id="output16" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter a string: computer
+Enter a character to search: p
+Index of character 'p': 3
+
+Enter a string: program
+Enter a character to search: x
+Index of character 'x': -1
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+
+<div class="code-container" id="code17" style="display:none;">
+                <h2><center>Code for Question 17</center></h2>
+                <pre><code><center>
+
+
+
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    int i = 0; 
+    int vowelCount = 0; 
+
+    
+    printf("Enter a string: ");
+    gets(str);  
+
+    // Count vowels
+    while (str[i] != '\0') {
+       
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || 
+            str[i] == 'o' || str[i] == 'u' || 
+            str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || 
+            str[i] == 'O' || str[i] == 'U') {
+            vowelCount++; 
+        }
+        i++; 
+    }
+
+   
+    printf("Number of vowels in the string: %d\n", vowelCount);
+    return 0;
+}
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output17" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter a string: online
+Number of vowels in the string: 3
+
+</center></code></pre>
+            </div>
+
+
+
+
+<div class="code-container" id="code18" style="display:none;">
+                <h2><center>Code for Question 18</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int main() {
+    char str[100]; 
+    int i = 0; 
+    int result = 0; 
+    int sign = 1; 
+
+    
+    printf("Enter a string representing an integer: ");
+    gets(str); 
+    //negative sign
+    if (str[i] == '-') {
+        sign = -1; 
+        i++; 
+    }
+
+   
+    while (str[i] != '\0') {
+        
+        if (str[i] >= '0' && str[i] <= '9') {
+            result = result * 10 + (str[i] - '0'); 
+        } else {
+           
+            printf("Invalid input. Please enter a valid integer.\n");
+            return 1; 
+        }
+        i++; 
+    }
+
+    
+    result *= sign;
+
+    printf("Converted integer value: %d\n", result);
+    return 0;
+}
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output18" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+Enter a string representing an integer: 45abc
+Invalid input. Please enter a valid integer.
+
+
+Enter a string representing an integer: -12656
+Converted integer value: -12656
+
+
+
+Enter a string representing an integer: 276
+Converted integer value: 276
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+
+<div class="code-container" id="code19" style="display:none;">
+                <h2><center>Code for Question 19</center></h2>
+                <pre><code><center>
+
+#include < stdio.h >
+
+int main() {
+    char str[100];
+    int i = 0; 
+    float result = 0.0; 
+    float decimalPlace = 1.0; 
+    int isNegative = 0;
+    int isFraction = 0; 
+
+  
+    printf("Enter a string representing a float: ");
+    gets(str); 
+    // negative sign
+    if (str[i] == '-') {
+        isNegative = 1; 
+        i++; 
+    }
+
+   
+    while (str[i] != '\0') {
+        
+        if (str[i] >= '0' && str[i] <= '9') {
+            if (isFraction) {
+                
+                decimalPlace *= 0.1; 
+                result += (str[i] - '0') * decimalPlace; // 
+            } else {
+                result = result * 10 + (str[i] - '0'); // 
+            }
+        } else if (str[i] == '.') {
+            
+            isFraction = 1; 
+        } else {
+            
+            printf("Invalid input. Please enter a valid float.\n");
+            return 1; 
+        }
+        i++; 
+    }
+
+    
+    if (isNegative) {
+        result = -result;
+    }
+
+   
+    printf("Converted float value: %.6f\n", result); 
+    return 0;
+}
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output19" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter a string representing a float: 7678
+Converted float value: 7678.000000
+
+Enter a string representing a float: 12.6877
+Converted float value: 12.687700
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="code-container" id="code20" style="display:none;">
+                <h2><center>Code for Question 20</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+int main() {
+    char str[1000]; 
+    int i = 0;
+    int charCount = 0;
+    int wordCount = 0;
+    int spaceCount = 0; 
+    int lineCount = 0;
+    int inWord = 0; 
+
+    
+    printf("Enter a string (press Enter to finish):\n");
+    gets(str); 
+    // Iterate
+    while (str[i] != '\0') {
+        charCount++; 
+
+        // Check space
+        if (str[i] == ' ') {
+            spaceCount++; 
+        }
+        if (str[i] == '\n') {
+            lineCount++; 
+        }
+
+        //  boundaries
+        if (str[i] == ' ' || str[i] == '\n' || str[i] == '\t') {
+            if (inWord) {
+                inWord = 0; 
+            }
+        } else {
+            if (!inWord) {
+                inWord = 1; 
+                wordCount++; 
+            }
+        }
+
+        i++;
+    }
+
+    
+    if (charCount > 0 && str[charCount - 1] != '\n') {
+        lineCount++; 
+    }
+
+   
+    printf("Number of characters: %d\n", charCount);
+    printf("Number of words: %d\n", wordCount);
+    printf("Number of spaces: %d\n", spaceCount);
+    printf("Number of lines: %d\n", lineCount);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output20" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter a string (press Enter to finish):
+this is a sentence
+Number of characters: 18
+Number of words: 4
+Number of spaces: 3
+Number of lines: 1
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+<div class="code-container" id="code21" style="display:none;">
+                <h2><center>Code for Question 21</center></h2>
+                <pre><code><center>
+
+#include <stdio.h>
+
+void swap(char *x, char *y) {
+    char temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+void permute(char *str, int left, int right) {
+    if (left == right) {
+    
+        for (int i = 0; str[i] != '\0'; i++) {
+            printf("%c", str[i]);
+        }
+        printf("\n");
+    } else {
+        for (int i = left; i <= right; i++) {
+            swap((str + left), (str + i)); 
+            permute(str, left + 1, right); 
+            swap((str + left), (str + i)); 
+        }
+    }
+}
+
+int main() {
+    char str[6]; 
+
+    
+    printf("Enter a string (e.g., ABCDE): ");
+    gets(str); 
+    int n = 0;
+    while (str[n] != '\0') {
+        n++;
+    }
+    n--; 
+
+    
+    printf("Permutations of the string \"%s\":\n", str);
+    permute(str, 0, n);
+
+    return 0;
+}
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output21" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter a string (e.g., ABCDE): ABCD
+Permutations of the string "ABCD":
+ABCD
+ABDC
+ACBD
+ACDB
+ADCB
+ADBC
+BACD
+BADC
+BCAD
+BCDA
+BDCA
+BDAC
+CBAD
+CBDA
+CABD
+CADB
+CDAB
+CDBA
+DBCA
+DBAC
+DCBA
+DCAB
+DACB
+DABC
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="code-container" id="code22" style="display:none;">
+                <h2><center>Code for Question 22</center></h2>
+                <pre><code><center>
+
+#include < stdio.h > 
+
+void sortString(char *str) {
+    int i, j;
+    char temp;
+
+   
+    for (i = 0; str[i] != '\0'; i++) {
+        for (j = i + 1; str[j] != '\0'; j++) {
+            if (str[i] > str[j]) {
+            //SWAP
+                temp = str[i];
+                str[i] = str[j];
+                str[j] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    char str[100]; 
+
+    
+    printf("Enter a string: ");
+    gets(str); 
+
+    
+    sortString(str);
+
+    
+    printf("Sorted string: %s\n", str);
+
+    return 0;
+}
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output22" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter a string: computer programming
+Sorted string:  aceggimmmnoopprrrtu
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+<div class="code-container" id="code23" style="display:none;">
+                <h2><center>Code for Question 23</center></h2>
+                <pre><code><center>
+
+
+
+
+#include < stdio.h >
+
+int countOccurrences(char *sentence, char *word) {
+    int count = 0;
+    char *p = sentence;
+
+    while (*p) {
+        
+        char *s = p;
+        char *w = word;
+
+        while (*s == *w && *w != '\0') {
+            s++;
+            w++;
+        }
+
+    
+        if (*w == '\0') {
+            
+            if ((s == sentence || *(s) == ' ') && (p == sentence || *(p - 1) == ' ')) {
+                count++;
+            }
+        }
+        p++; 
+    }
+
+    return count;
+}
+
+int main() {
+    char sentence[1000]; 
+    char word[100]; 
+
+   
+    printf("Enter a sentence: ");
+    gets(sentence); 
+
+   
+    printf("Enter the word to count: ");
+    gets(word); 
+
+ 
+    int occurrences = countOccurrences(sentence, word);
+
+    printf("The word \"%s\" occurs %d times in the sentence.\n", word, occurrences);
+
+    return 0;
+}
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output23" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+
+
+
+
+
+
+Enter a sentence: Hello world! Hello everyone.
+Enter the word to count: Hello
+
+
+The word "Hello" occurs 2 times in the sentence.
+
+
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+<div class="code-container" id="code24" style="display:none;">
+                <h2><center>Code for Question 24</center></h2>
+                <pre><code><center>
+
+#include < stdio.h >
+
+void replaceWord(char *sentence, char *oldWord, char *newWord) {
+    char result[1000];
+    int i = 0, j = 0, k;
+
+    while (sentence[i] != '\0') {
+        
+        k = 0;
+        int match = 1; 
+
+        while (oldWord[k] != '\0') {
+            if (sentence[i + k] != oldWord[k]) {
+                match = 0; 
+                break;
+            }
+            k++;
+        }
+
+        
+        if (match && (sentence[i + k] == ' ' || sentence[i + k] == '\0')) {
+            for (k = 0; newWord[k] != '\0'; k++) {
+                result[j++] = newWord[k]; 
+            }
+            
+            i += k;
+        } else {
+            result[j++] = sentence[i]; 
+            i++;
+        }
+    }
+    
+    result[j] = '\0'; 
+
+    
+    printf("Modified sentence: %s\n", result);
+}
+
+int main() {
+    char sentence[1000];
+    char oldWord[100];
+    char newWord[100]; 
+    printf("Enter a sentence: ");
+    gets(sentence); 
+
+  
+    printf("Enter the word to replace: ");
+    gets(oldWord); 
+
+    
+    printf("Enter the new word: ");
+    gets(newWord); 
+
+   
+    replaceWord(sentence, oldWord, newWord);
+
+    return 0;
+}
+
+     
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output24" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter a sentence: This is a pen
+Enter the word to replace: pen
+Enter the new word: book
+Modified sentence: This is a book
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+
+
+<div class="code-container" id="code25" style="display:none;">
+                <h2><center>Code for Question 25</center></h2>
+                <pre><code><center>
+
+#include < stdio.h >
+
+void trimSpaces(char *str) {
+    int start = 0, end = 0;
+
+    
+    while (str[start] == ' ') {
+        start++;
+    }
+
+    
+    end = start;
+    while (str[end] != '\0') {
+        end++;
+    }
+    end--; 
+    while (end >= start && str[end] == ' ') {
+        end--;
+    }
+
+   //trimed result
+    char trimmed[1000];
+    int j = 0;
+
+  //copy
+    for (int i = start; i <= end; i++) {
+        trimmed[j++] = str[i];
+    }
+    trimmed[j] = '\0'; 
+
+    
+    for (int i = 0; i <= j; i++) {
+        str[i] = trimmed[i];
+    }
+}
+
+int main() {
+    char str[1000]; 
+
+   
+    printf("Enter a string: ");
+    gets(str); 
+    
+    trimSpaces(str);
+
+   
+    printf("Trimmed string: '%s'\n", str);
+
+    return 0;
+}
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output25" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+
+Enter a string: c language
+Trimmed string: 'c language'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="code-container" id="code26" style="display:none;">
+                <h2><center>Code for Question 26</center></h2>
+                <pre><code><center>
+
+
+
+#include < stdio.h >
+
+int findSecondWordIndex(char *str) {
+    int i = 0;
+
+
+    while (str[i] == ' ') {
+        i++;
+    }
+
+    //first
+    while (str[i] != '\0' && str[i] != ' ') {
+        i++;
+    }
+
+   
+    while (str[i] == ' ') {
+        i++;
+    }
+
+    //second
+    return (str[i] != '\0') ? i : -1; 
+}
+
+int main() {
+    char str[1000]; 
+  
+    printf("Enter a string: ");
+    gets(str); 
+    int index = findSecondWordIndex(str);
+
+
+    if (index != -1) {
+        printf("The start index of the second word is: %d\n", index);
+        printf("The second word is: ");
+
+    
+        for (int i = index; str[i] != '\0' && str[i] != ' '; i++) {
+            printf("%c", str[i]);
+        }
+        printf("\n");
+    } else {
+        printf("There is no second word in the string.\n");
+    }
+
+    return 0;
+}
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output26" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+
+Enter a string: c is a programming language
+The start index of the second word is: 2
+The second word is: is
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+<div class="code-container" id="code27" style="display:none;">
+                <h2><center>Code for Question 27</center></h2>
+                <pre><code><center>
+
+
+#include < stdio.h >
+
+void printLeftAligned(char *str) {
+    printf("%s\n", str);
+}
+
+void printCenterAligned(char *str, int width) {
+    int len = 0;
+
+    
+    while (str[len] != '\0') {
+        len++;
+    }
+
+    
+    int padding = (width - len) / 2;
+    for (int i = 0; i < padding; i++) {
+        printf(" ");
+    }
+    printf("%s\n", str);
+}
+
+void printRightAligned(char *str, int width) {
+    int len = 0;
+
+    
+    while (str[len] != '\0') {
+        len++;
+    }
+
+    
+    int padding = width - len;
+    for (int i = 0; i < padding; i++) {
+        printf(" ");
+    }
+    printf("%s\n", str);
+}
+
+int main() {
+    char str[1000]; 
+    int alignment;
+
+   
+    printf("Enter a string: ");
+    gets(str); 
+    
+    printf("Choose text alignment:\n");
+    printf("1. Left\n");
+    printf("2. Center\n");
+    printf("3. Right\n");
+    printf("Enter your choice (1, 2, or 3): ");
+    scanf("%d", &alignment);
+
+    
+    int width = 80; 
+
+    switch (alignment) {
+        case 1:
+            printLeftAligned(str);
+            break;
+        case 2:
+            printCenterAligned(str, width);
+            break;
+        case 3:
+            printRightAligned(str, width);
+            break;
+        default:
+            printf("Invalid choice!\n");
+            break;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output27" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+
+Enter a string: Hello World
+Choose text alignment:
+1. Left
+2. Center
+3. Right
+Enter your choice (1, 2, or 3): 
+
+2
+                                  Hello World
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+
+<div class="code-container" id="code28" style="display:none;">
+                <h2><center>Code for Question 28</center></h2>
+                <pre><code><center>
+
+
+
+#include < stdio.h >
+
+#define MAX_WORDS 10
+#define MAX_LENGTH 100
+
+
+void createDictionary(char words[MAX_WORDS][MAX_LENGTH], char meanings[MAX_WORDS][MAX_LENGTH]);
+void deleteWord(char words[MAX_WORDS][MAX_LENGTH], char meanings[MAX_WORDS][MAX_LENGTH], char *wordToDelete);
+void searchWord(char words[MAX_WORDS][MAX_LENGTH], char meanings[MAX_WORDS][MAX_LENGTH], char *wordToSearch);
+void copyString(char *dest, char *src);
+int compareStrings(char *str1, char *str2);
+
+int main() {
+    char words[MAX_WORDS][MAX_LENGTH];
+    char meanings[MAX_WORDS][MAX_LENGTH];
+    int choice;
+    char input[MAX_LENGTH];
+
+  
+    createDictionary(words, meanings);
+
+    do {
+      
+        printf("\nDictionary Operations:\n");
+        printf("1. Search a word\n");
+        printf("2. Delete a word\n");
+        printf("3. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        getchar(); 
+
+        switch (choice) {
+            case 1:
+                printf("Enter the word to search: ");
+                gets(input); 
+                searchWord(words, meanings, input);
+                break;
+            case 2:
+                printf("Enter the word to delete: ");
+                gets(input);
+                deleteWord(words, meanings, input);
+                break;
+            case 3:
+                printf("Exiting...\n");
+                break;
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    } while (choice != 3);
+
+    return 0;
+}
+
+
+void createDictionary(char words[MAX_WORDS][MAX_LENGTH], char meanings[MAX_WORDS][MAX_LENGTH]) {
+    char *predefinedWords[MAX_WORDS] = {
+        "Apple",
+        "Banana",
+        "Orange",
+        "Grapes",
+        "Mango",
+        "Peach",
+        "Cherry",
+        "Lemon",
+        "Pineapple",
+        "Watermelon"
+    };
+    
+    char *predefinedMeanings[MAX_WORDS] = {
+        "A fruit that is round and typically red, green, or yellow.",
+        "A long, curved fruit that is yellow when ripe.",
+        "A citrus fruit that is typically orange in color.",
+        "Small round fruits that grow in clusters.",
+        "A tropical fruit with a sweet taste and a large pit.",
+        "A soft, round fruit with fuzzy skin.",
+        "A small, round fruit that is typically red or black.",
+        "A yellow citrus fruit known for its sour taste.",
+        "A tropical fruit with spiky skin and sweet, juicy flesh.",
+        "A large fruit with green skin and sweet, red pulp."
+    };
+    
+    for (int i = 0; i < MAX_WORDS; i++) {
+        copyString(words[i], predefinedWords[i]);
+        copyString(meanings[i], predefinedMeanings[i]);
+    }
+}
+
+
+void deleteWord(char words[MAX_WORDS][MAX_LENGTH], char meanings[MAX_WORDS][MAX_LENGTH], char *wordToDelete) {
+    int i, found = 0;
+
+    for (i = 0; i < MAX_WORDS; i++) {
+        if (compareStrings(words[i], wordToDelete) == 0) {
+            found = 1;
+            
+            for (int j = i; j < MAX_WORDS - 1; j++) {
+                copyString(words[j], words[j + 1]);
+                copyString(meanings[j], meanings[j + 1]);
+            }
+           
+            copyString(words[MAX_WORDS - 1], "");
+            copyString(meanings[MAX_WORDS - 1], "");
+            printf("Deleted word: %s\n", wordToDelete);
+            break;
+        }
+    }
+
+    if (!found) {
+        printf("Word not found: %s\n", wordToDelete);
+    }
+}
+
+
+void searchWord(char words[MAX_WORDS][MAX_LENGTH], char meanings[MAX_WORDS][MAX_LENGTH], char *wordToSearch) {
+    int i, found = 0;
+
+    for (i = 0; i < MAX_WORDS; i++) {
+        if (compareStrings(words[i], wordToSearch) == 0) {
+            found = 1;
+            printf("Meaning of %s: %s\n", words[i], meanings[i]);
+            break;
+        }
+    }
+
+    if (!found) {
+        printf("Word not found: %s\n", wordToSearch);
+    }
+}
+
+
+void copyString(char *dest, char *src) {
+    while (*src != '\0') {
+        *dest = *src;
+        dest++;
+        src++;
+    }
+    *dest = '\0';
+}
+
+
+int compareStrings(char *str1, char *str2) {
+    while (*str1 != '\0' && *str2 != '\0') {
+        if (*str1 != *str2) {
+            return 1;
+        }
+        str1++;
+        str2++;
+    }
+    return (*str1 == *str2) ? 0 : 1; 
+}
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output28" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+Dictionary Operations:
+1. Search a word
+2. Delete a word
+3. Exit
+Enter your choice: 1
+Enter your choice: 1
+Enter the word to search: Mango
+Meaning of Mango: A tropical fruit with a sweet taste and a large pit.
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="code-container" id="code29" style="display:none;">
+                <h2><center>Code for Question 29</center></h2>
+                <pre><code><center>
+
+#include < stdio.h >
+
+#define MAX_LENGTH 10
+
+int main() {
+    char input[MAX_LENGTH + 1]; 
+    int asciiValues[MAX_LENGTH];
+    
+    
+    printf("Enter a string (up to %d characters): ", MAX_LENGTH);
+    gets(input); 
+    // Convert
+    for (int i = 0; i < MAX_LENGTH; i++) {
+        
+        if (input[i] == '\0') {
+            break;
+        }
+        asciiValues[i] = (int)input[i]; 
+    }
+
+   
+    printf("ASCII values:\n");
+    for (int i = 0; i < MAX_LENGTH; i++) {
+        if (input[i] == '\0') {
+            break; 
+        }
+        printf("Character: '%c' -> ASCII: %d\n", input[i], asciiValues[i]);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+<div class="output-container" id="output29" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter a string (up to 10 characters): program
+ASCII values:
+Character: 'p' -> ASCII: 112
+Character: 'r' -> ASCII: 114
+Character: 'o' -> ASCII: 111
+Character: 'g' -> ASCII: 103
+Character: 'r' -> ASCII: 114
+Character: 'a' -> ASCII: 97
+Character: 'm' -> ASCII: 109
+
+
+
+</center></code></pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showProgram(questionNumber) {
+            // Hide all code and output sections
+            document.querySelectorAll('.code-container, .output-container').forEach((el) => {
+                el.style.display = 'none';
+            });
+
+            // Show the selected question's code and output
+            document.getElementById('code' + questionNumber).style.display = 'block';
+            document.getElementById('output' + questionNumber).style.display = 'block';
+
+            // Show the code-output container
+            document.getElementById('output-container').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>

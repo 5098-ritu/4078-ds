@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+background-image:url(picture.WEBP);
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100%100%;
+}
+</style>
+ <style>
+  a {
+            color: blue; /* Normal link color */
+        }
+        a:hover {
+            color: green; /* Color when hovered */
+        }
+        a:visited {
+            color: purple; /* Color for visited links */
+}
+</style>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Program Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+.navbar a:hover{
+background-color:#A52A2A;
+}
+
+        nav {
+            background-color: #FFD700;
+            color: black;
+            padding: 1em;
+        }
+.navbar a:hover{
+background-color:#A52A2A;
+}
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .question-list {
+            flex: 1;
+            padding: 20px;
+            background-color:#F5DEB3;
+            margin-right: 10px;
+        }
+
+        .code-output-container {
+            flex: 2;
+            display: none; /* Initially hide the output */
+            flex-direction: column;
+        }
+
+        .code-container, .output-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #D2B48C;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+        
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="question-list">
+            <h2><center>Program Questions</center></h2> 
+ <ul><br>
+                <li><a href="#" onclick="showProgram(1) "style="color: black;">1. CREATE A STACK IMPLEMENTING THE OPERATION ON AN INTEGER ARRAY(PUSH,POP,PEEK,IS FULL,IS EMPTY).</a></li>
+              <br>  <li><a href="#" onclick="showProgram(2)"style="color: black;">2. CREATE A STACK IMPLEMENTING THE OPERATION ON THE CHARACTERS ARRAY(PUSH,POP,PEEK,IS FULL,IS EMPTY).
+</a></li>
+               <br> <li><a href="#" onclick="showProgram(3)"style="color: black;">3. CREATE A STACK IMPLEMENTING THE OPERATION ON AN INTEGER NODE //(DYNAMICLALLY)(OUSH,POP,PEEK,IS EMPTY ,IS FULL). </a></li>
+                <br><li><a href="#" onclick="showProgram(4)"style="color: black;">4. CREATE A STACK IMPLEMENTING THE OPERATION ON CHARACTER NODES(DYNAMICALLY)(PUSH,POP,PEEK,ISEMPTY,ISFULL). </a></li>
+                <br><li><a href="#" onclick="showProgram(5)"style="color: black;">5. ENTER A STRING FROM THE USER AND AND REVERSE THE STRING  USING STACK</a></li>
+                <br><li><a href="#" onclick="showProgram(6)"style="color: black;">6. CREATE THE PROGRAM TO MATCH THE SINGLE BRACKET USING STACK.
+</a></li>
+                <br><li><a href="#" onclick="showProgram(7)"style="color: black;">7. CREATE TWO INTEGER STACK IN A SINGLE ARRAY .</a></li>
+
+<br><li><a href="#" onclick="showProgram(8)"style="color: black;">8. SORT THE STACK IN ASCENDING ORDER USING INTEGER ARRAY.</a></li>
+
+<br><li><a href="#" onclick="showProgram(9)"style="color: black;">9. ENTER THE INFIX  EXPRESSION FROM THE USER AND CONVERT INTO PREFIX EXPRESSION.</a></li>
+
+<br><li><a href="#" onclick="showProgram(10)"style="color: black;">10. ENTER THE INFIX EXPRESSION FROM THE USER AND CONVERT INTO POSTFIX EXPRESSION.</a></li>
+
+<br><li><a href="#" onclick="showProgram(11)"style="color: black;">11. CREATE A PROGRAM TO EVALUATE THE PREFIX EXPRESSION.
+.</a></li>
+
+<br><li><a href="#" onclick="showProgram(12)"style="color: black;">12. CREATE A PROGRAM TO EVALUATE THE POSTFIX EXPRESSION .
+</a></li>
+
+<br><li><a href="#" onclick="showProgram(13)"style="color: black;">13. IMPLEMENT THE TOWER OF HANOI USING STACK.</a></li>
+
+
+
+
+
+            </ul>
+        </div>
+        <div class="code-output-container" id="output-container">
+            <div class="code-container" id="code1">
+                <h2><center></u>Code for QUESTION 1</center></u></h2>
+                <pre><code><center>
+ #include< stdio.h >
+    
+void push(int stk[],int *i,int val,int size)
+{
+  if(*i==size-1)
+  {
+  printf("stack is full.\n");
+  }
+  else
+  {
+  stk[++(*i)]=val;
+  printf("pushed value :%d\n",val);
+  }
+}
+int pop(int stk[],int * i)
+{
+   if(*i==-1)
+     {
+     printf("stack is empty.\n");
+     return -1;
+     }
+     else{
+     return stk[(*i)--];
+	 }
+}
+int peek(int stk[],int i)
+{
+if(i==-1)
+{
+ printf("stack is empty.\n");
+ return -1;
+}
+ else{
+     return stk[i];
+     }
+}
+
+int main()
+{int size=5;
+
+int stk[size],i=-1,ch,val;
+
+
+do{
+
+printf("\nstack menu\n");
+printf("\n1. push.");
+printf("\n2. pop.");
+printf("\n3. peek.");
+printf("\n4. exit.\n");
+
+printf("\nenter your choise:");
+scanf("%d",&ch);
+
+switch(ch){
+
+case 1:   printf("enter value to push :");
+	  scanf("%d",&val);
+	  push(stk,&i,val,size);
+	  break;
+
+case 2:   val=pop(stk,&i);
+	  if(val!=0)
+	  {
+	  printf("\npopped value : %d",val);
+	  }
+	  break;
+
+case 3:  val=peek(stk,i);
+	 if(val!=-1)
+	 {
+	 printf("\ntop value is : %d",val);
+	 }
+	 break ;
+
+case 4:   printf("\nexiting......");
+	  break;
+
+default:   printf("\ninvalid choice.try again");
+	   break;
+
+}        }
+       while(ch!=4);
+{
+return 0;
+}}
+
+
+
+             </center>  </code></pre>
+            </div>
+            <div class="output-container" id="output1">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. exit.
+
+enter your choise:1
+enter value to push :23
+pushed value :23
+
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. exit.
+
+enter your choise:2
+
+popped value : 23
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. exit.
+
+enter your choise:4
+
+exiting......
+
+
+
+               </center> </code></pre>
+            </div>
+
+            <div class="code-container" id="code2" style="display:none;">
+                <h2><center>Code for QUESTION 2</center></h2>
+                <pre><code><center>
+#include< stdio.h >
+
+void push(char stk[], int *i, char val, int size)
+{
+    if(*i == size - 1)
+    {
+        printf("stack is full.\n");
+    }
+    else
+    {
+        stk[++(*i)] = val;
+        printf("pushed value : %c\n", val);
+    }
+}
+
+char pop(char stk[], int *i)
+{
+    if(*i == -1)
+    {
+        printf("stack is empty.\n");
+        return -1;
+    }
+    else
+    {
+        return stk[(*i)--];
+    }
+}
+
+char peek(char stk[], int i)
+{
+    if(i == -1)
+    {
+        printf("stack is empty.\n");
+        return -1;
+    }
+    else
+    {
+        return stk[i];
+    }
+}
+
+int main()
+{
+    int size = 2;
+    char stk[size];
+    int i = -1, ch;
+    char val;
+
+    do
+    {
+        printf("\nstack menu\n");
+        printf("\n1. push.");
+        printf("\n2. pop.");
+        printf("\n3. peek.");
+        printf("\n4. exit.\n");
+
+        printf("\nenter your choice:");
+        scanf(" %c", &ch);
+
+        switch(ch)
+        {
+            case '1': printf("enter character  to push :");
+                      scanf(" %c", &val);
+                      push(stk, &i, val, size);
+                      break;
+
+            case '2': val = pop(stk, &i);
+                      if(val != -1)
+                      {
+                          printf("\npopped value : %c", val);
+                      }
+                      break;
+
+            case '3': val = peek(stk, i);
+                      if(val != -1)
+                      {
+                          printf("\ntop value is : %c", val);
+                      }
+                      break;
+
+            case '4': printf("\nexiting......");
+                      break;
+
+            default: printf("\ninvalid choice. try again");
+                     break;
+        }
+    }
+    while(ch != '4');
+
+    return 0;
+}
+
+
+
+             </center>   </code></pre>
+            </div>
+            <div class="output-container" id="output2" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. exit.
+
+enter your choice:1
+enter character  to push :E
+pushed value : E
+
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. exit.
+
+enter your choice:3
+
+top value is : E
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. exit.
+
+enter your choice:2
+
+popped value : E
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. exit.
+
+enter your choice:4
+
+exiting......
+
+               </center> </code></pre>
+            </div>
+
+            <div class="code-container" id="code3" style="display:none;">
+                <h2><center>Code for QUESTION 3</center></h2>
+                <pre><code><center>
+                #include< stdio.h >
+#include< stdlib.h >
+
+struct stack {
+    int data;
+    struct stack *next;
+};
+
+struct stack *start = NULL;
+
+void push(int val) {
+    struct stack temp = (struct stack)malloc(sizeof(struct stack));
+    if (temp != NULL) {
+        temp->data = val;
+        temp->next = start;
+        start = temp;
+    } else {
+        printf("stack is full");
+    }
+}
+
+void pop() {
+    if(start == NULL) {
+        printf("empty");
+    } else {
+        struct stack *temp = start;
+        printf("value popped is :%d", temp->data);
+        start = start->next;
+        free(temp);
+    }
+}
+int peek() {
+    if(start == NULL) {
+        printf("stack is empty");
+        return -1;
+    } else {
+        return start->data;
+    }
+}
+int isEmpty() {
+    return start == NULL;
+}
+int isFull() {
+    struct stack temp = (struct stack)malloc(sizeof(struct stack));
+    if(temp != NULL) {
+        free(temp);
+        return 0;
+    } else {
+        return 1;
+    }
+}
+int main() {
+    int ch, val;
+
+    do {
+        printf("\nstack menu\n");
+        printf("\n1. push.");
+        printf("\n2. pop.");
+        printf("\n3. peek.");
+        printf("\n4. is empty.");
+        printf("\n5. is full.");
+        printf("\n6. exit.\n");
+
+        printf("\nenter your choice:");
+        scanf("%d", &ch);
+
+        switch(ch) {
+            case 1: printf("enter value to push :");
+                    scanf("%d", &val);
+                    push(val);
+                    printf("value %d is pushed\n", val);
+                    break;
+
+            case 2: pop();
+                    break;
+
+            case 3: val = peek();
+                    if(val != -1) {
+                        printf("\ntop value is : %d", val);
+                    }
+                    break;
+
+            case 4: if(isEmpty()) {
+                        printf("\nstack is empty");
+                    } else {
+                        printf("\nstack is not empty");
+                    }
+                    break;
+
+            case 5: if(isFull()) {
+                        printf("\nstack is full");
+                    } else {
+                        printf("\nstack is not full");
+                    }
+                    break;
+
+            case 6: printf("\nexiting......");
+                    break;
+
+            default: printf("\ninvalid choice. try again");
+                     break;
+        }
+    } while(ch != 6);
+
+    return 0;
+
+}     </center></code></pre>
+            </div>
+            <div class="output-container" id="output3" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. is empty.
+5. is full.
+6. exit.
+
+enter your choice:1
+enter value to push :32
+value 32 is pushed
+
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. is empty.
+5. is full.
+6. exit.
+
+enter your choice:1
+enter value to push :23
+value 23 is pushed
+
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. is empty.
+5. is full.
+6. exit.
+
+enter your choice:4
+
+stack is not empty
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. is empty.
+5. is full.
+6. exit.
+
+enter your choice:5
+
+stack is not full
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. is empty.
+5. is full.
+6. exit.
+
+enter your choice:
+3
+
+top value is : 23
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. is empty.
+5. is full.
+6. exit.
+
+enter your choice:2
+value popped is :23
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. is empty.
+5. is full.
+6. exit.
+                </center></code></pre>
+            </div>
+<div class="code-container" id="code4" style="display:none;">
+                <h2><center>Code for QUESTION 4</center></h2>
+                <pre><code><center>
+#include< stdio.h >
+#include< stdlib.h >
+
+struct stack {
+    char data;
+    struct stack *next;
+};
+
+struct stack *start = NULL;
+
+void push(char val) {
+    struct stack temp = (struct stack)malloc(sizeof(struct stack));
+    if (temp != NULL) {
+        temp->data = val;
+        temp->next = start;
+        start = temp;
+    } else {
+        printf("stack is full");
+    }
+}
+
+void pop() {
+    if(start == NULL) {
+        printf("empty");
+    } else {
+        struct stack *temp = start;
+        printf("value popped is :%c", temp->data);
+        start = start->next;
+        free(temp);
+    }
+}
+
+char peek() {
+    if(start == NULL) {
+        printf("stack is empty");
+        return '\0';
+    } else {
+        return start->data;
+    }
+}
+
+int isEmpty() {
+    return start == NULL;
+}
+
+int isFull() {
+    struct stack temp = (struct stack)malloc(sizeof(struct stack));
+    if(temp != NULL) {
+        free(temp);
+        return 0;
+    } else {
+        return 1;
+    }
+}
+
+int main() {
+    int ch;
+    char val;
+
+    do {
+        printf("\nstack menu\n");
+        printf("\n1. push.");
+        printf("\n2. pop.");
+        printf("\n3. peek.");
+        printf("\n4. is empty.");
+        printf("\n5. is full.");
+        printf("\n6. exit.\n");
+
+        printf("\nenter your choice:");
+        scanf("%d", &ch);
+
+        switch(ch) {
+            case 1: printf("enter character to push :");
+                    scanf(" %c", &val);
+                    push(val);
+                    printf("character '%c' is pushed\n", val);
+                    break;
+
+            case 2: pop();
+                    break;
+
+            case 3: val = peek();
+                    if(val != '\0') {
+                        printf("\ntop character is : '%c'", val);
+                    }
+                    break;
+
+            case 4: if(isEmpty()) {
+                        printf("\nstack is empty");
+                    } else {
+                        printf("\nstack is not empty");
+                    }
+                    break;
+
+            case 5: if(isFull()) {
+                        printf("\nstack is full");
+                    } else {
+                        printf("\nstack is not full");
+                    }
+                    break;
+
+            case 6: printf("\nexiting......");
+                    break;
+
+            default: printf("\ninvalid choice. try again");
+                     break;
+        }
+    } while(ch != 6);
+
+    return 0;
+}
+
+
+
+
+</center></code></pre>
+            </div>
+
+ <div class="output-container" id="output4" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. is empty.
+5. is full.
+6. exit.
+
+enter your choice:1
+enter character to push :6
+character '6' is pushed
+
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. is empty.
+5. is full.
+6. exit.
+
+enter your choice:1
+enter character to push :78
+character '7' is pushed
+
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. is empty.
+5. is full.
+6. exit.
+
+enter your choice:
+invalid choice. try again
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. is empty.
+5. is full.
+6. exit.
+
+enter your choice:4
+
+stack is not empty
+stack menu
+
+1. push.
+2. pop.
+3. peek.
+4. is empty.
+5. is full.
+6. exit.
+
+enter your choice:6
+
+exiting......
+
+ </center></code></pre>
+            </div>
+<div class="code-container" id="code5" style="display:none;">
+                <h2><center>Code for QUESTION 5</center></h2>
+                <pre><code><center>
+#include < stdio.h >
+
+void reverse(char str[]) {
+    int length = 0;
+    while (str[length] != '\0') {
+        length++;
+    }
+
+    char stk[length];
+    int top = -1,i;
+   
+     for (i = 0; i < length; i++) 
+     {
+        stk[++top] = str[i];    //push
+     }
+
+       printf("Reversed string: ");
+      for (int i = top; i >= 0; i--) 
+    {
+        printf("%c", stk[i]);
+    }
+         printf("\n");
+  }
+
+int main() {
+    char str[50];
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    reverse(str);
+
+    return 0;
+}
+
+
+
+ </center></code></pre>
+            </div>
+            
+            <div class="output-container" id="output5" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+ 
+Enter a string: hello
+Reversed string: olleh
+
+
+
+
+</center></code></pre>
+            </div>
+<div class="code-container" id="code6" style="display:none;">
+                <h2><center>Code for QUESTION 6</center></h2>
+                <pre><code><center>
+#include < stdio.h >
+
+char stack[100]; 
+int top = -1;    
+   void push(char item)
+{
+    if (top < 99)
+    { 
+        stack[++top] = item; 
+    }
+}
+char pop()
+{
+    if (top >= 0) 
+    {
+        return stack[top--]; 
+    }
+       return '\0'; 
+}
+int isBalanced(char *expr) 
+{
+    for (int i = 0; expr[i] != '\0'; i++) 
+   {
+        char current = expr[i];
+        if (current == '(') 
+        {
+            push(current);
+        } 
+        else if (current == ')') 
+          {
+            char popped = pop();
+            if (popped != '(') 
+              {
+                return 0;   }
+           }      } 
+ return top == -1;
+}
+   int main() 
+{
+    char expr[100]; 
+    printf("Enter an expression: ");
+    scanf("%s", expr); 
+    if (isBalanced(expr))
+    {
+        printf("Brackets are balanced.\n");
+    }  
+    else {
+        printf("Brackets are not balanced.\n");
+         }
+     return 0;
+}
+
+</center></code></pre>
+            </div>
+<div class="output-container" id="output6" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+Enter an expression: ((()))
+Brackets are balanced.
+</center></code></pre>
+            </div>
+
+<div class="code-container" id="code7" style="display:none;">
+                <h2><center>Code for QUESTION 7</center></h2>
+                <pre><code><center>
+#include < stdio.h >
+
+int arr[100];  
+int top1 = -1; 
+int top2;      
+void initialize(int size) {
+    top2 = size; 
+}
+int push1(int value) {
+    if (top1 + 1 == top2) {
+        printf("Stack 1 Overflow\n");
+        return 0; 
+    }
+    arr[++top1] = value;
+    printf("Inserted %d into Stack 1\n", value); 
+    return 1; // Success
+}
+int push2(int value) {
+    if (top2 - 1 == top1) {
+        printf("Stack 2 Overflow\n");
+        return 0; // Stack 2 is full
+    }
+    arr[--top2] = value;
+    printf("Inserted %d into Stack 2\n", value); 
+    return 1;
+}
+int pop1() {
+    if (top1 == -1) {
+        printf("Stack 1 Underflow\n");
+        return -1; 
+    }
+    return arr[top1--];
+}
+int pop2() {
+    if (top2 == 100) { 
+        printf("Stack 2 Underflow\n");
+        return -1; 
+    }
+    return arr[top2++];
+}
+
+int main() {
+    int size;
+    printf("Enter the size of the stacks: ");
+    scanf("%d", &size);
+
+    if (size > 100) {
+        printf("Size exceeds maximum limit of 100.\n");
+        return 1;
+    }
+    initialize(size);
+    int choice, value;
+
+    while (1) {
+        printf("\n1. Push to Stack 1\n2. Push to Stack 2\n3. Pop from Stack 1\n4. Pop from Stack 2\n5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Enter value to push to Stack 1: ");
+                scanf("%d", &value);
+                push1(value);
+                break;
+            case 2:
+                printf("Enter value to push to Stack 2: ");
+                scanf("%d", &value);
+                push2(value);
+                break;
+            case 3:
+                printf("Popped from Stack 1: %d\n", pop1());
+                break;
+            case 4:
+                printf("Popped from Stack 2: %d\n", pop2());
+                break;
+            case 5:
+                printf("Exiting the program.!\n"); 
+                return 0; 
+            default:
+                printf("Invalid choice. Please try again.\n");
+        }
+    }
+
+    return 0;
+}
+
+
+
+</center></code></pre>
+            </div>
+
+<div class="output-container" id="output7" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter the size of the stacks: 5
+
+1. Push to Stack 1
+2. Push to Stack 2
+3. Pop from Stack 1
+4. Pop from Stack 2
+5. Exit
+Enter your choice: 3
+Stack 1 Underflow
+Popped from Stack 1: -1
+
+1. Push to Stack 1
+2. Push to Stack 2
+3. Pop from Stack 1
+4. Pop from Stack 2
+5. Exit
+Enter your choice: 1
+Enter value to push to Stack 1: 12
+Inserted 12 into Stack 1
+
+1. Push to Stack 1
+2. Push to Stack 2
+3. Pop from Stack 1
+4. Pop from Stack 2
+5. Exit
+Enter your choice: 5
+Exiting the program.
+
+</center></code></pre>
+            </div>
+            
+            <div class="code-container" id="code8" style="display:none;">
+                <h2><center>Code for QUESTION 8</center></h2>
+                <pre><code><center>
+#include < stdio.h >
+
+void sortStack(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap elements
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int n;
+    printf("Enter the number of elements in the stack: ");
+    scanf("%d", &n);
+ int stack[n];
+    printf("Enter the elements of the stack: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &stack[i]);
+    }
+
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        arr[i] = stack[n - i - 1];
+    }
+
+
+    sortStack(arr, n);
+
+   
+    for (int i = 0; i < n; i++) {
+        stack[i] = arr[i];
+    }
+
+    printf("Sorted stack: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", stack[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+
+
+</center></code></pre>
+            </div>
+<div class="output-container" id="output8" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+                   Enter the number of elements in the stack: 5
+                   Enter the elements of the stack: 2
+                                                    1
+                                                    7
+                                                    5
+                                                    3
+                   Sorted stack: 1 2 3 5 7 
+
+
+</center></code></pre>
+            </div>
+
+ 
+            
+            <div class="code-container" id="code9" style="display:none;">
+                <h2><center>Code for QUESTION 9</center></h2>
+                <pre><code><center>
+#include< stdio.h >
+#include< stdlib.h >
+#include< string.h >
+
+int isOperator(char c) {
+    return (c == '+' || c == '-' || c == '*' || c == '/' || c == '^');
+}
+int operatorPrecedence(char c) {
+    if (c == '+' || c == '-') {
+        return 1;
+    } else if (c == '*' || c == '/') {
+        return 2;
+    } else if (c == '^') {
+        return 3;
+    }
+    return 0;
+}
+void infixToPrefixConversion(char infix[], char prefix[], int size) {
+    int i, j = 0;
+    char stack[size];
+    int top = -1;
+    for (i = strlen(infix) - 1; i >= 0; i--) {
+     if (!isOperator(infix[i])) {
+            prefix[j++] = infix[i];
+        } else {
+            while (top >= 0 && operatorPrecedence(stack[top]) >= operatorPrecedence(infix[i])) {
+                prefix[j++] = stack[top--];
+            }
+                  stack[++top] = infix[i];
+        }
+    }
+    while (top >= 0) {
+        prefix[j++] = stack[top--];
+    }
+
+    for (i = 0; i < j / 2; i++) {
+        char temp = prefix[i];
+        prefix[i] = prefix[j - i - 1];
+        prefix[j - i - 1] = temp;
+    }
+}
+int main() {
+    int size = 100; 
+    char infix[size];
+    char prefix[size];
+    printf("Enter the infix expression: ");
+    fgets(infix, sizeof(infix), stdin);
+    infix[strlen(infix) - 1] = '\0'; 
+    infixToPrefixConversion(infix, prefix, size);
+    printf("Prefix expression: %s\n", prefix);
+    return 0;
+}
+</center></code></pre>
+            </div>
+<div class="output-container" id="output9" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter the infix expression: a*b+c
+Prefix expression: +*abc
+
+
+
+</center></code></pre>
+            </div>
+ 
+            <div class="code-container" id="code10" style="display:none;">
+                <h2><center>Code for QUESTION 10</center></h2>
+                <pre><code><center>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int isOperator(char c) {
+    return (c == '+' || c == '-' || c == '*' || c == '/' || c == '^');
+}
+
+int operatorPrecedence(char c) {
+    if (c == '+' || c == '-') {
+        return 1;
+    } else if (c == '*' || c == '/') {
+        return 2;
+    } else if (c == '^') {
+        return 3;
+    }
+    return 0;
+}
+
+void infixToPostfixConversion(char infix[], char postfix[], int size) {
+    int i, j = 0;
+    char stack[size];
+    int top = -1;
+
+    for (i = 0; infix[i] != '\0'; i++) {
+      
+        if (!isOperator(infix[i]) && infix[i] != '(' && infix[i] != ')') {
+            postfix[j++] = infix[i];
+        }
+        
+        else if (infix[i] == '(') {
+            stack[++top] = infix[i];
+        }
+        else if (infix[i] == ')') {
+            while (top >= 0 && stack[top] != '(') {
+                postfix[j++] = stack[top--];
+            }
+            top--; 
+        }
+        
+        else if (isOperator(infix[i])) {
+            while (top >= 0 && operatorPrecedence(stack[top]) >= operatorPrecedence(infix[i])) {
+                postfix[j++] = stack[top--];
+            }
+            stack[++top] = infix[i]; 
+        }
+    }
+
+    while (top >= 0) {
+        postfix[j++] = stack[top--];
+    }
+
+    postfix[j] = '\0'; 
+}
+
+int main() {
+    int size = 100; 
+    char infix[size];
+    char postfix[size];
+
+    printf("Enter the infix expression: ");
+    fgets(infix, sizeof(infix), stdin);
+    infix[strlen(infix) - 1] = '\0'; 
+
+    infixToPostfixConversion(infix, postfix, size);
+
+    printf("Postfix expression: %s\n", postfix);
+
+    return 0;
+}
+
+
+</center></code></pre>
+            </div>
+<div class="output-container" id="output10" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter the infix expression: a^g*t-g
+Postfix expression: ag^t*g-
+
+</center></code></pre>
+            </div>
+ 
+            <div class="code-container" id="code11" style="display:none;">
+                <h2><center>Code for QUESTION 11</center></h2>
+                <pre><code><center>
+#include< stdio.h >
+int evaluatePrefix(char prefix[]) {
+    int stack[100]; 
+    int top = -1;   
+    int i; 
+    for (i = 0; prefix[i] != '\0'; i++); 
+    for (i -= 1; i >= 0; i--) {
+       if (prefix[i] == ' ') {
+            continue;
+        }
+     if (prefix[i] >= '0' && prefix[i] <= '9') {
+            int num = 0;
+            while (i >= 0 && prefix[i] >= '0' && prefix[i] <= '9') {
+                num = num * 10 + (prefix[i] - '0');
+                i--;
+            }
+            stack[++top] = num; 
+            i++; 
+        } else { 
+            int operand1 = stack[top--]; 
+            int operand2 = stack[top--]; 
+            int result;
+
+            switch (prefix[i]) {
+                case '+':
+                    result = operand1 + operand2;
+                    break;
+                case '-':
+                    result = operand1 - operand2;
+                    break;
+                case '*':
+                    result = operand1 * operand2;
+                    break;
+                case '/':
+                    result = operand1 / operand2;
+                    break;
+                case '^':
+                    result = 1;
+                    for (int j = 0; j < operand2; j++) {
+                        result *= operand1; 
+                    }
+                    break;
+                default:
+                    return 0; 
+            }
+            stack[++top] = result; 
+        }
+    }
+    return stack[top]; 
+}
+
+int main() {
+    char prefix[100]; 
+    
+    printf("Enter the prefix expression: ");
+    fgets(prefix, sizeof(prefix), stdin);
+    
+   
+    for (int i = 0; prefix[i] != '\0'; i++) {
+        if (prefix[i] == '\n') {
+            prefix[i] = '\0';
+            break;
+        }
+    }
+   int result = evaluatePrefix(prefix);
+    printf("Result of the prefix expression: %d\n", result);
+    return 0;
+}
+
+
+
+</center></code></pre>
+            </div>
+<div class="output-container" id="output11" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter the prefix expression: + 9 * 2 3
+Result of the prefix expression: 15
+
+
+</center></code></pre>
+            </div>
+ 
+            <div class="code-container" id="code12" style="display:none;">
+                <h2><center>Code for QUESTION 12</center></h2>
+                <pre><code><center>
+#include< stdio.h >
+int evaluatePostfix(char postfix[]) {
+    int stack[100]; 
+    int top = -1;   
+    int i;
+    for (i = 0; postfix[i] != '\0'; i++) {
+       
+        if (postfix[i] == ' ') {
+            continue;
+        }
+
+        if (postfix[i] >= '0' && postfix[i] <= '9') {
+            int num = 0;
+         
+            while (i >= 0 && postfix[i] >= '0' && postfix[i] <= '9') {
+                num = num * 10 + (postfix[i] - '0');
+                i++;
+            }
+            stack[++top] = num; 
+            i--;
+        } else { 
+            int operand2 = stack[top--]; 
+            int operand1 = stack[top--]; 
+            int result;
+    switch (postfix[i]) {
+                case '+':
+                    result = operand1 + operand2;
+                    break;
+                case '-':
+                    result = operand1 - operand2;
+                    break;
+                case '*':
+                    result = operand1 * operand2;
+                    break;
+                case '/':
+                    result = operand1 / operand2;
+                    break;
+                case '^':
+                    result = 1;
+                    for (int j = 0; j < operand2; j++) {
+                        result *= operand1;
+                    }
+                    break;
+                default:
+                    return 0;            }
+            stack[++top] = result;}
+    }
+    return stack[top];}
+int main() {
+    char postfix[100]; 
+    printf("Enter the postfix expression: ");
+    fgets(postfix, sizeof(postfix), st`din);
+    for (int i = 0; postfix[i] != '\0'; i++) {
+        if (postfix[i] == '\n') {
+            postfix[i] = '\0';
+            break;
+        }
+    }
+   int result = evaluatePostfix(postfix);
+    printf("Result of the postfix expression: %d\n", result);
+    return 0;
+}
+
+
+</center></code></pre>
+            </div>
+<div class="output-container" id="output12" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+Enter the postfix expression: 5 3 + 2 *
+Result of the postfix expression: 16
+
+
+</center></code></pre>
+            </div>
+ 
+            <div class="code-container" id="code13" style="display:none;">
+                <h2><center>Code for QUESTION 13</center></h2>
+                <pre><code><center>
+#include< stdio.h >
+struct Stack {
+    int top;
+    int disks[64]; 
+};
+void initStack(struct Stack* s) {
+    s->top = -1;
+}
+int isEmpty(struct Stack* s) {
+    return s->top == -1;
+}
+void push(struct Stack* s, int disk) {
+    if (s->top < 63) { 
+        s->disks[++(s->top)] = disk;
+    }
+}
+int pop(struct Stack* s) {
+    if (!isEmpty(s)) {
+        return s->disks[(s->top)--];
+    }
+    return -1;
+}
+void moveDisk(char from, char to, int disk) {
+    printf("Move disk %d from %c to %c\n", disk, from, to);
+}
+
+void towerOfHanoi(int n, struct Stack* source, struct Stack* auxiliary, struct Stack* target) {
+    
+    for (int i = n; i >= 1; i--) {
+        push(source, i);
+    }
+    int totalMoves = (1 << n) - 1; // 2^n - 1
+    for (int i = 1; i <= totalMoves; i++) {
+        struct Stack* from;
+        struct Stack* to;
+       if (i % 3 == 1) {
+            from = source; to = target;
+        } else if (i % 3 == 2) {
+            from = source; to = auxiliary;
+        } else {
+            from = auxiliary; to = target;
+        }
+        if (!isEmpty(from)) {
+            int disk = pop(from);
+            moveDisk(from == source ? 'A' : (from == auxiliary ? 'B' : 'C'),
+                      to == source ? 'A' : (to == auxiliary ? 'B' : 'C'), disk);
+            push(to, disk);        }
+    }
+}
+int main() {
+    int n;
+    printf("Enter the number of disks (max 64): ");
+    scanf("%d", &n);
+    if (n < 1 || n > 64) {
+        printf("Invalid number of disks. Please enter a number between 1 and 64.\n");
+        return 1;
+    }
+    struct Stack source, auxiliary, target;
+    initStack(&source);
+    initStack(&auxiliary);
+    initStack(&target);
+    towerOfHanoi(n, &source, &auxiliary, &target);
+    return 0;
+}
+
+
+
+</center></code></pre>
+            </div>
+<div class="output-container" id="output13" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+Enter the number of disks (max 64): 2
+	Move disk 1 from A to C
+	Move disk 2 from A to B
+	Move disk 2 from B to C
+
+
+</center></code></pre>
+            </div>
+ </div>
+    </div>
+
+    <script>
+        function showProgram(questionNumber) {
+            // Hide all code and output sections
+            document.querySelectorAll('.code-container, .output-container').forEach((el) => {
+                el.style.display = 'none';
+            });
+
+            // Show the selected question's code and output
+            document.getElementById('code' + questionNumber).style.display = 'block';
+            document.getElementById('output' + questionNumber).style.display = 'block';
+
+            // Show the code-output container
+            document.getElementById('output-container').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
